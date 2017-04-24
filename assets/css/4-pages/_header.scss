@@ -1,0 +1,76 @@
+header {
+    height: 450px;
+    background: url("../img/header-bg.jpg") center center;
+    background-size: cover;
+
+    #topbar {
+        background-color: white;
+        opacity: 0.8;
+        height: 80px;
+    }
+
+    .logo {
+        @include size(50px);
+        float: left;
+        margin: 10px 0 0 30px;
+
+        path {
+            fill: rgba(0,0,0,0.7);
+        }
+
+        polygon {
+            fill: rgba(0,0,0,0.7);
+        }
+
+        rect {
+            fill: rgba(0,0,0,0.7);
+        }
+    }
+
+    nav {
+        float: right;
+        margin: 30px 30px 0 0;
+
+        a {
+            display: inline-block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: rgba(0,0,0,0.7);
+            @extend %small-bold;
+
+            &:hover {
+                color: rgba(0,0,0,1);
+            }
+        }
+    }
+
+    h1 {
+        clear: both;
+        text-align: center;
+        font: {
+            size: 72px;
+            weight: 700;
+        }
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px;
+        padding-top: 100px;
+
+        span {
+            display: inline-block;
+            padding: 0.2em 0.5em;
+            border: rgba(1,1,1,0.5) solid 10px;
+        }
+    }
+
+    .kicker {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: capitalize;
+        letter-spacing: 0.05em;
+        color: #000;
+        line-height: 1;
+    }
+}
