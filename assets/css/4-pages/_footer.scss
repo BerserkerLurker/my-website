@@ -1,5 +1,5 @@
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     background: url("../img/header-bg.jpg") center center;
     background-size: cover;
@@ -8,6 +8,7 @@ footer {
 
     .lockup {
         margin: 50px 30px;
+        padding-top: 30px;
         @include clearfix;
 
         .logo {
