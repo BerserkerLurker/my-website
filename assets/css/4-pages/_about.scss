@@ -1,20 +1,14 @@
-h3 {
-    @extend %small-bold;
-    color: $accent;
-    text-align: center;
-    padding: 100px 0 30px;
-}
-
 .face-lockup {
     max-width: 780px;
     @include display(flex);
     margin: 0 auto;
     @include align-items(center);
-    @include justify-content(space-around);
+    @include justify-content(space-between);
 
     .face-image {
         @include size(200px);
         background: url("../img/face.png");
+        border-radius: 50%;
         order: 3;
     }
     // all classes that start with icon-
@@ -77,7 +71,7 @@ h3 {
     max-width: 620px;
     padding: 0 15px;
     margin: 50px auto;
-    font-size: 24px;
+    font-size: 14px;
     text-align: center;
     font-weight: 300;
 }

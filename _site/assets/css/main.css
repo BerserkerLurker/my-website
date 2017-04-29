@@ -209,7 +209,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-header nav a, footer .lockup .content-wrap, h3 {
+h3 {
+  color: #e1c184;
+  text-align: center;
+  padding: 60px 0 30px; }
+
+@media screen and (max-width: 480px) {
+  h3 {
+    padding: 50px 0 50px; } }
+
+a {
+  color: #e1c184;
+  text-decoration: none;
+  outline: 0; }
+  a:hover, a:focus {
+    color: #e6cb99; }
+
+h3, header nav a, footer .lockup .content-wrap {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -252,50 +268,61 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
-    padding-top: 100px; }
+    padding-top: 70px; }
     header h1 span {
       display: inline-block;
       padding: 0.2em 0.5em;
       border: rgba(1, 1, 1, 0.5) solid 10px; }
+  @media screen and (max-width: 600px) {
+    header h1 {
+      font-size: 52px; } }
   header .kicker {
     font-size: 16px;
     text-align: center;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.05em;
-    color: #000;
+    color: rgba(1, 1, 1, 0.5);
     line-height: 1; }
+    header .kicker span {
+      background: #fff; }
 
 footer {
-  position: relative;
-  bottom: 0;
-  background: url("../img/header-bg.jpg") center center;
-  background-size: cover;
-  width: 100%;
+  background: url("../img/icon.svg") no-repeat, url("../img/header-bg.jpg") center center;
+  background-size: 50px 50px, cover;
+  background-position: 30px 35px, 50% 50%;
+  background-blend-mode: overlay, normal;
   height: 150px; }
   footer .lockup {
     margin: 50px 30px;
-    padding-top: 30px; }
+    padding-top: 30px;
+    /*  .logo {
+            @include size(50px);
+            float: left;
+            margin-right: 30px;
+            svg{
+              height: 50px;
+            }
+            path {
+                fill: rgba(0,0,0,0.7);
+            }
+
+            polygon {
+                fill: rgba(0,0,0,0.7);
+            }
+
+            rect {
+                fill: rgba(0,0,0,0.7);
+            }
+        }*/ }
     footer .lockup::after {
       clear: both;
       content: "";
       display: table; }
-    footer .lockup .logo {
-      height: 50px;
-      width: 50px;
-      float: left;
-      margin-right: 30px; }
-      footer .lockup .logo svg {
-        height: 50px; }
-      footer .lockup .logo path {
-        fill: rgba(0, 0, 0, 0.7); }
-      footer .lockup .logo polygon {
-        fill: rgba(0, 0, 0, 0.7); }
-      footer .lockup .logo rect {
-        fill: rgba(0, 0, 0, 0.7); }
     footer .lockup .content-wrap {
       float: left;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-left: 80px; }
       footer .lockup .content-wrap a {
         text-decoration: none;
         margin-right: 30px;
@@ -308,11 +335,6 @@ footer {
         text-transform: uppercase;
         font-size: 12px;
         color: rgba(0, 0, 0, 0.4); }
-
-h3 {
-  color: #e1c184;
-  text-align: center;
-  padding: 100px 0 30px; }
 
 .face-lockup {
   max-width: 780px;
@@ -333,19 +355,20 @@ h3 {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute; }
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
   .face-lockup .face-image {
     height: 200px;
     width: 200px;
     background: url("../img/face.png");
+    border-radius: 50%;
     -webkit-order: 3;
     -ms-flex-order: 3;
     order: 3; }
@@ -397,7 +420,7 @@ h3 {
   max-width: 620px;
   padding: 0 15px;
   margin: 50px auto;
-  font-size: 24px;
+  font-size: 14px;
   text-align: center;
   font-weight: 300; }
 
